@@ -1,11 +1,14 @@
+import heroImage from "../landingA/images/hero.jpg";
+
 export const landingA = {
   sections: [
     {
       type: "Hero",
       data: {
-        title: "",
-        subtitle: "",
-        buttonText: "",
+        title: "Welcome to Our Landing A Page",
+        subtitle: "Create amazing web experiences easily",
+        buttonText: "Get Started",
+        imageUrl: heroImage,
       },
     },
     {

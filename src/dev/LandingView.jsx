@@ -16,9 +16,7 @@ const LandingView = () => {
         </Link>
       </div>
 
-      <div className="mt-16">
-        <PageBuilder config={config} />
-      </div>
+      <PageBuilder config={config} />
     </div>
   );
 };
