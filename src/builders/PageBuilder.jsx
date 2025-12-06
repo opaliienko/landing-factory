@@ -11,7 +11,13 @@ const PageBuilder = ({ config }) => {
       {config.sections.map((section, index) => {
         const SectionComponent = sectionMap[section.type];
         if (!SectionComponent) return null;
-        return <SectionComponent key={index} content={section.data} />;
+        return (
+          <SectionComponent
+            key={index}
+            content={section.data}
+            theme={config.theme}
+          />
+        );
       })}
     </>
   );
