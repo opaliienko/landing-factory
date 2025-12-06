@@ -9,13 +9,14 @@ const Hero = ({ content, theme }) => {
       <div className="container mx-auto text-center text-black">
         <h1 className={`${customClasses.title}`}>{content.title}</h1>
         <p className={`${customClasses.subtitle}`}>{content.subtitle}</p>
-        <button
-          className={`${customClasses.button}`}
-          style={{ backgroundColor: theme.colors.BUTTON_BG_COLOR }}
-        >
-          {content.buttonText}
-        </button>
       </div>
+
+      <button
+        className={`${customClasses.button}`}
+        style={{ backgroundColor: theme.colors.BUTTON_BG_COLOR }}
+      >
+        {content.buttonText}
+      </button>
     </section>
   );
 };
