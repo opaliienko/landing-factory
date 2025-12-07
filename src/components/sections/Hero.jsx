@@ -2,7 +2,6 @@ import { useInView } from "react-intersection-observer";
 
 import MainTitle from "../ui/MainTitle";
 import MainSubtitle from "../ui/MainSubtitle";
-import MainButton from "../ui/MainButton";
 
 const Hero = ({ content, theme }) => {
   const { ref, inView } = useInView({
@@ -11,6 +10,8 @@ const Hero = ({ content, theme }) => {
   });
 
   const customClasses = content.customClasses || {};
+
+  const Button = content.button;
 
   return (
     <section
@@ -35,7 +36,7 @@ const Hero = ({ content, theme }) => {
           delay={100}
         />
 
-        <MainButton
+        <Button
           styles={customClasses.button}
           text={content.buttonText}
           theme={theme}

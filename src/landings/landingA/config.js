@@ -2,6 +2,8 @@ import { THEMES } from "./themes";
 
 import heroImage from "../landingA/images/hero.jpg";
 
+import MainButton from "../../components/ui/MainButton";
+
 import FeatureCard from "../../components/ui/FeatureCard";
 import ReviewCard from "../../components/ui/ReviewCard";
 
@@ -24,14 +26,14 @@ export const landingA = {
         subtitle: "Create amazing web experiences easily",
         buttonText: "Get Started",
         imageUrl: heroImage,
+        button: MainButton,
         customClasses: {
           section:
             "w-full py-4 px-4 sm:py-6 sm:px-6 md:py-12 md:px-20 flex flex-col justify-center items-center",
           container: "container flex flex-col text-left text-black",
           title: "mb-4 text-4xl sm:text-5xl font-bold",
           subtitle: "mb-10 text-3xl sm:text-4xl",
-          button:
-            "self-center px-6 py-3 rounded-lg text-black border border-white opacity-70",
+          button: "self-center",
         },
       },
     },
