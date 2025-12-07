@@ -54,7 +54,7 @@ const Reviews = ({ content, theme }) => {
         <FadeInWhenVisible
           animation={theme.animation}
           inView={inView}
-          delay={300}
+          delay={200}
         >
           <Swiper
             speed={500}

@@ -2,6 +2,7 @@ import { useInView } from "react-intersection-observer";
 
 import Title from "../ui/Title";
 import Subtitle from "../ui/Subtitle";
+import FadeInWhenVisible from "../ui/FadeInWhenVisible";
 
 const Features = ({ content, theme }) => {
   const { ref, inView } = useInView({
@@ -10,6 +11,7 @@ const Features = ({ content, theme }) => {
   });
 
   const customClasses = content.customClasses || {};
+  const Card = content.card;
 
   return (
     <section
@@ -40,45 +42,26 @@ const Features = ({ content, theme }) => {
           />
         )}
 
-        <div className={customClasses.featuresGrid}>
-          {content.features.map((feature, index) => {
-            const IconComponent = feature.icon;
+        <FadeInWhenVisible
+          animation={theme.animation}
+          inView={inView}
+          delay={200}
+        >
+          <div className={customClasses.grid}>
+            {content.features.map((feature) => {
+              const IconComponent = feature.icon;
 
-            return (
-              <div
-                key={index}
-                className={customClasses.featureCard}
-                style={{
-                  backgroundColor: theme.colors.white[100],
-                }}
-              >
-                {IconComponent && (
-                  <div className={customClasses.featureIcon}>
-                    <IconComponent
-                      width={28}
-                      height={28}
-                      fill={theme.colors.ACCENT_COLOR}
-                    />
-                  </div>
-                )}
-
-                <h3
-                  className={customClasses.featureTitle}
-                  style={{ color: theme.colors.ACCENT_COLOR }}
-                >
-                  {feature.title}
-                </h3>
-
-                <p
-                  className={customClasses.featureText}
-                  style={{ color: theme.colors.TEXT_COLOR }}
-                >
-                  {feature.text}
-                </p>
-              </div>
-            );
-          })}
-        </div>
+              return (
+                <Card
+                  key={feature.id}
+                  feature={feature}
+                  icon={IconComponent}
+                  theme={theme}
+                />
+              );
+            })}
+          </div>
+        </FadeInWhenVisible>
       </div>
     </section>
   );
