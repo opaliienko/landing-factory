@@ -32,15 +32,13 @@ const Hero = ({ content, theme }) => {
           text={content.subtitle}
           theme={theme}
           inView={inView}
-          delay={200}
+          delay={100}
         />
 
         <MainButton
           styles={customClasses.button}
           text={content.buttonText}
           theme={theme}
-          inView={inView}
-          delay={400}
         />
       </div>
     </section>

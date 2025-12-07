@@ -3,6 +3,8 @@ import { Pagination, Navigation } from "swiper/modules";
 
 import { useInView } from "react-intersection-observer";
 
+import Title from "../ui/Title";
+import Subtitle from "../ui/Subtitle";
 import SwiperNavButtons from "../ui/SwiperNavButtons";
 import FadeInWhenVisible from "../ui/FadeInWhenVisible";
 
@@ -27,23 +29,26 @@ const Reviews = ({ content, theme }) => {
       style={{ backgroundColor: theme.colors.MAIN_BG_COLOR }}
     >
       <div className={customClasses.container}>
-        <FadeInWhenVisible animation={theme.animation} inView={inView}>
-          <h2 className={customClasses.title}>{content.title}</h2>
-        </FadeInWhenVisible>
-
-        {content.subtitle && (
-          <FadeInWhenVisible
-            animation={theme.animation}
+        {content.title && (
+          <Title
+            styles={customClasses.title}
+            color={theme.colors.TEXT_COLOR}
+            text={content.title}
+            theme={theme}
             inView={inView}
-            delay={200}
-          >
-            <p
-              className={customClasses.subtitle}
-              style={{ color: theme.colors.TEXT_COLOR }}
-            >
-              {content.subtitle}
-            </p>
-          </FadeInWhenVisible>
+            delay={0}
+          />
+        )}
+
+        {content.title && (
+          <Subtitle
+            styles={customClasses.subtitle}
+            color={theme.colors.TEXT_COLOR}
+            text={content.subtitle}
+            theme={theme}
+            inView={inView}
+            delay={100}
+          />
         )}
 
         <FadeInWhenVisible

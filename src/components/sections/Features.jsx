@@ -1,19 +1,43 @@
+import { useInView } from "react-intersection-observer";
+
+import Title from "../ui/Title";
+import Subtitle from "../ui/Subtitle";
+
 const Features = ({ content, theme }) => {
+  const { ref, inView } = useInView({
+    threshold: 0.1,
+    triggerOnce: true,
+  });
+
   const customClasses = content.customClasses || {};
 
   return (
     <section
+      ref={ref}
       className={customClasses.section}
       style={{ backgroundColor: theme.colors.SECONDARY_BG_COLOR }}
     >
       <div className={customClasses.container}>
         {content.title && (
-          <h2
-            className={customClasses.title}
-            style={{ color: theme.colors.TEXT_COLOR }}
-          >
-            {content.title}
-          </h2>
+          <Title
+            styles={customClasses.title}
+            color={theme.colors.TEXT_COLOR}
+            text={content.title}
+            theme={theme}
+            inView={inView}
+            delay={0}
+          />
+        )}
+
+        {content.title && (
+          <Subtitle
+            styles={customClasses.subtitle}
+            color={theme.colors.TEXT_COLOR}
+            text={content.subtitle}
+            theme={theme}
+            inView={inView}
+            delay={100}
+          />
         )}
 
         <div className={customClasses.featuresGrid}>
