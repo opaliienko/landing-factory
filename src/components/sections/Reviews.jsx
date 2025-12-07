@@ -27,7 +27,7 @@ const Reviews = ({ content, theme }) => {
       className={customClasses.section}
       style={{ backgroundColor: theme.colors.MAIN_BG_COLOR }}
     >
-      <div className={customClasses.container}>
+      <div className="container mx-auto max-w-7xl">
         {content.title && (
           <Title
             text={content.title}
