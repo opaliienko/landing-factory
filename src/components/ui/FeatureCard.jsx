@@ -1,4 +1,4 @@
-const FeatureCard = ({ feature, icon: Icon, theme }) => (
+const FeatureCard = ({ data, icon: Icon, theme }) => (
   <div
     className="p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-200 hover:-translate-y-2"
     style={{
@@ -15,14 +15,14 @@ const FeatureCard = ({ feature, icon: Icon, theme }) => (
       className="text-2xl font-bold mb-4 text-center"
       style={{ color: theme.colors.ACCENT_COLOR }}
     >
-      {feature.title}
+      {data.title}
     </h3>
 
     <p
       className="text-base text-center leading-relaxed"
       style={{ color: theme.colors.TEXT_COLOR }}
     >
-      {feature.text}
+      {data.text}
     </p>
   </div>
 );

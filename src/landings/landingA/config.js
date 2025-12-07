@@ -3,6 +3,7 @@ import { THEMES } from "./themes";
 import heroImage from "../landingA/images/hero.jpg";
 
 import FeatureCard from "../../components/ui/FeatureCard";
+import ReviewCard from "../../components/ui/ReviewCard";
 
 import RocketIcon from "../../icons/RocketIcon";
 import LightningIcon from "../../icons/LightningIcon";
@@ -10,6 +11,8 @@ import LockIcon from "../../icons/LockIcon";
 import PaletteIcon from "../../icons/PaletteIcon";
 import MobileIcon from "../../icons/MobileIcon";
 import DiamondIcon from "../../icons/DiamondIcon";
+
+import ClientAvatarIcon from "../../icons/ClientAvatarIcon";
 
 export const landingA = {
   theme: THEMES,
@@ -94,46 +97,63 @@ export const landingA = {
           "Don't just take our word for it - hear from our satisfied customers",
         reviews: [
           {
+            id: 1,
             name: "Anna Johnson",
             position: "CEO at TechCorp",
             text: "This product completely transformed our workflow. Highly recommended!",
+            icon: ClientAvatarIcon,
           },
           {
+            id: 2,
             name: "Mark Williams",
             position: "Marketing Director",
             text: "The best investment we made this year. Amazing results!",
+            icon: ClientAvatarIcon,
           },
           {
+            id: 3,
             name: "Sarah Davis",
             position: "Product Manager",
             text: "Outstanding quality and excellent customer support. Five stars!",
+            icon: ClientAvatarIcon,
           },
           {
+            id: 4,
             name: "John Smith",
             position: "CTO",
             text: "Incredible performance and reliability. Our team loves it!",
+            icon: ClientAvatarIcon,
           },
           {
+            id: 5,
             name: "Emily Brown",
             position: "Designer",
             text: "Beautiful interface and so easy to use. Absolutely love it!",
+            icon: ClientAvatarIcon,
           },
           {
+            id: 6,
             name: "Michael Lee",
             position: "Developer",
             text: "Clean code and great documentation. Perfect for our needs!",
+            icon: ClientAvatarIcon,
           },
           {
+            id: 7,
             name: "Lisa Taylor",
             position: "Founder",
             text: "Game-changer for our business. Can't imagine working without it!",
+            icon: ClientAvatarIcon,
           },
           {
+            id: 8,
             name: "David Wilson",
             position: "Analyst",
             text: "Powerful features and intuitive design. Highly satisfied!",
+            icon: ClientAvatarIcon,
           },
         ],
+        card: ReviewCard,
         customClasses: {
           section: "py-16 px-4 md:py-24",
           container: "w-full max-w-7xl mx-auto",

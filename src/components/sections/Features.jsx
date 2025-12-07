@@ -54,7 +54,7 @@ const Features = ({ content, theme }) => {
               return (
                 <Card
                   key={feature.id}
-                  feature={feature}
+                  data={feature}
                   icon={IconComponent}
                   theme={theme}
                 />

@@ -12,8 +12,6 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-import "./swiper.css";
-
 const Reviews = ({ content, theme }) => {
   const { ref, inView } = useInView({
     threshold: 0.1,
@@ -21,6 +19,7 @@ const Reviews = ({ content, theme }) => {
   });
 
   const customClasses = content.customClasses || {};
+  const Card = content.card;
 
   return (
     <section
@@ -85,40 +84,20 @@ const Reviews = ({ content, theme }) => {
               },
             }}
           >
-            {content.reviews.map((review, index) => (
-              <SwiperSlide key={index}>
-                <div
-                  className={`
-                    p-6 bg-white shadow-md rounded-xl h-64
-                    flex flex-col justify-between
-                    hover:shadow-xl transition-shadow duration-300
-                  `}
-                >
-                  <p
-                    className="text-base leading-relaxed"
-                    style={{ color: theme.colors.TEXT_COLOR }}
-                  >
-                    "{review.text}"
-                  </p>
-                  <div className="border-t pt-4 mt-4">
-                    <h4
-                      className="font-bold text-lg"
-                      style={{ color: theme.colors.ACCENT_COLOR }}
-                    >
-                      {review.name}
-                    </h4>
-                    {review.position && (
-                      <p
-                        className="text-sm opacity-70"
-                        style={{ color: theme.colors.TEXT_COLOR }}
-                      >
-                        {review.position}
-                      </p>
-                    )}
-                  </div>
-                </div>
-              </SwiperSlide>
-            ))}
+            {content.reviews.map((review, index) => {
+              const IconComponent = review.icon;
+
+              return (
+                <SwiperSlide key={index}>
+                  <Card
+                    key={review.id}
+                    data={review}
+                    icon={IconComponent}
+                    theme={theme}
+                  />
+                </SwiperSlide>
+              );
+            })}
 
             <SwiperNavButtons theme={theme} />
           </Swiper>
