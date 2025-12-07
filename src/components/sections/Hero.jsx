@@ -3,7 +3,9 @@ import { useInView } from "react-intersection-observer";
 import MainTitle from "../ui/MainTitle";
 import MainSubtitle from "../ui/MainSubtitle";
 
-const Hero = ({ content, theme }) => {
+import { trackLead } from "../../helpers/trackLead";
+
+const Hero = ({ content, theme, landingId }) => {
   const { ref, inView } = useInView({
     threshold: 0.1,
     triggerOnce: true,
@@ -12,6 +14,10 @@ const Hero = ({ content, theme }) => {
   const customClasses = content.customClasses || {};
 
   const Button = content.button;
+
+  const onHandleButtonClick = () => {
+    trackLead("Дякуємо! Ваш запит отримано!", landingId);
+  };
 
   return (
     <section
@@ -40,6 +46,7 @@ const Hero = ({ content, theme }) => {
           styles={customClasses.button}
           text={content.buttonText}
           theme={theme}
+          onClick={onHandleButtonClick}
         />
       </div>
     </section>

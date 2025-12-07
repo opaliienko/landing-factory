@@ -1,3 +1,5 @@
+import { ToastContainer } from "react-toastify";
+
 import Hero from "../components/sections/Hero";
 import Features from "../components/sections/Features";
 import Reviews from "../components/sections/reviews";
@@ -16,9 +18,20 @@ const PageBuilder = ({ config }) => {
             key={index}
             content={section.data}
             theme={config.theme}
+            landingId={config.landingId}
           />
         );
       })}
+      <ToastContainer
+        position="top-right"
+        autoClose={2000}
+        hideProgressBar={false}
+        newestOnTop={true}
+        closeOnClick
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </>
   );
 };

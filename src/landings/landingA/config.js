@@ -3,7 +3,6 @@ import { THEMES } from "./themes";
 import heroImage from "../landingA/images/hero.jpg";
 
 import MainButton from "../../components/ui/MainButton";
-
 import FeatureCard from "../../components/ui/FeatureCard";
 import ReviewCard from "../../components/ui/ReviewCard";
 
@@ -17,6 +16,7 @@ import DiamondIcon from "../../icons/DiamondIcon";
 import ClientAvatarIcon from "../../icons/ClientAvatarIcon";
 
 export const landingA = {
+  landingId: "LandingA",
   theme: THEMES,
   sections: [
     {
