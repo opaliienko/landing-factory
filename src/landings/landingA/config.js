@@ -85,14 +85,40 @@ export const landingA = {
     {
       type: "Reviews",
       data: {
-        features: [
-          { name: "", feedback: "" },
-          { name: "", feedback: "" },
+        title: "Our rewiews",
+        reviews: [
+          {
+            name: "Emily Johnson",
+            text: "Amazing experience! The service was smooth, fast, and exceeded all my expectations.",
+          },
+          {
+            name: "Michael Roberts",
+            text: "I’m impressed with the quality. Everything was delivered on time, and the support team was very helpful.",
+          },
+          {
+            name: "Sophia Martinez",
+            text: "A great solution for anyone who values efficiency and clean design. Definitely recommend!",
+          },
+          {
+            name: "Daniel Evans",
+            text: "Very intuitive and easy to use. It saved me a lot of time and the final result looks fantastic.",
+          },
+          {
+            name: "Olivia Clark",
+            text: "Professional, reliable, and fast. I appreciated the attention to detail and smooth communication.",
+          },
+          {
+            name: "James Carter",
+            text: "Top-quality service! The team was responsive and helped me achieve exactly what I needed.",
+          },
+          {
+            name: "Ava Thompson",
+            text: "Exceeded my expectations. Everything looks great and works flawlessly across devices.",
+          },
         ],
         customClasses: {
-          section:
-            "w-full py-4 px-4 sm:py-6 sm:px-6 md:py-12 md:px-20 flex items-center justify-center",
-          container: "",
+          section: "w-full py-4 px-4 sm:py-6 sm:px-6 md:py-12 md:px-20",
+          container: "w-full",
           title: "text-3xl md:text-4xl font-bold text-center mb-10",
         },
       },
