@@ -23,7 +23,7 @@ const Features = ({ content, theme }) => {
         {content.title && (
           <Title
             text={content.title}
-            style={{ color: theme.colors.TEXT_COLOR }}
+            style={{ color: theme.colors.TITLE_TEXT_COLOR }}
             theme={theme}
             inView={inView}
             delay={0}

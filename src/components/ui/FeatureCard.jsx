@@ -17,7 +17,7 @@ const FeatureCard = ({ data, icon: Icon, theme }) => (
     <div className="mb-4">
       <ThirdTitle
         text={data.title}
-        style={{ color: theme.colors.ACCENT_COLOR, textAlign: "center" }}
+        style={{ color: theme.colors.TITLE_TEXT_COLOR, textAlign: "center" }}
       />
     </div>
 

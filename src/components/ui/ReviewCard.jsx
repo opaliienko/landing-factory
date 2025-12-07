@@ -10,7 +10,10 @@ const ReviewCard = ({ data, icon: Icon, theme }) => (
       style={{ color: theme.colors.TEXT_COLOR, textAlign: "center" }}
     />
 
-    <div className="border-t pt-4">
+    <div
+      className="border-t pt-4"
+      style={{ borderColor: theme.colors.ACCENT_COLOR }}
+    >
       <div className="flex justify-center items-center gap-2">
         {Icon && (
           <Icon width={28} height={28} fill={theme.colors.ACCENT_COLOR} />
@@ -18,14 +21,14 @@ const ReviewCard = ({ data, icon: Icon, theme }) => (
 
         <ThirdTitle
           text={data.name}
-          style={{ color: theme.colors.ACCENT_COLOR, textAlign: "center" }}
+          style={{ color: theme.colors.TITLE_TEXT_COLOR, textAlign: "center" }}
         />
       </div>
 
       {data.position && (
         <Text
           text={data.position}
-          style={{ color: theme.colors.ACCENT_COLOR, textAlign: "center" }}
+          style={{ color: theme.colors.TEXT_COLOR, textAlign: "center" }}
         />
       )}
     </div>

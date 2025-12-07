@@ -1,13 +1,17 @@
 export const THEMES = {
   colors: {
-    TEXT_COLOR: "#030712",
-
     MAIN_BG_COLOR: "#BACBD9",
     SECONDARY_BG_COLOR: "#F2F2F2",
 
-    ACCENT_COLOR: "#1D1340",
+    MAIN_TITLE_TEXT_COLOR: "#030712",
+    MAIN_SUB_TITLE_TEXT_COLOR: "#030712",
+
+    TITLE_TEXT_COLOR: "#030712",
+    TEXT_COLOR: "#030712",
 
     BUTTON_BG_COLOR: "#e5e7eb",
+
+    ACCENT_COLOR: "#1D1340",
 
     white: {
       100: "#FFFFFF",
@@ -15,6 +19,10 @@ export const THEMES = {
 
     black: {
       100: "#000000",
+    },
+
+    gradients: {
+      main: "linear-gradient(to bottom, #F2F2F2, #BACBD9)",
     },
   },
 

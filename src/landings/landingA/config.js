@@ -10,7 +10,7 @@ import ReviewCard from "../../components/ui/ReviewCard";
 
 const sectionPadding = "w-full py-8 px-5 sm:py-10 sm:px-8 md:py-12 md:px-16";
 const footerPadding =
-  "w-full pt-8 pb-6 sm:pt-10 sm:pb-8 md:pt-12 md:pb-8 px-5 sm:px-8 md:px-16";
+  "w-full pt-8 pb-6 sm:pt-8 sm:pb-8 md:pt-10 md:pb-8 px-5 sm:px-8 md:px-16";
 
 export const landingA = {
   landingId: "LandingA",

@@ -25,13 +25,13 @@ const Reviews = ({ content, theme }) => {
     <section
       ref={ref}
       className={customClasses.section}
-      style={{ backgroundColor: theme.colors.MAIN_BG_COLOR }}
+      style={{ background: theme.colors.gradients.main }}
     >
       <div className="container mx-auto max-w-7xl">
         {content.title && (
           <Title
             text={content.title}
-            style={{ color: theme.colors.TEXT_COLOR }}
+            style={{ color: theme.colors.TITLE_TEXT_COLOR }}
             theme={theme}
             inView={inView}
             delay={0}

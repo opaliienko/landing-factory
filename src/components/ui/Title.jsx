@@ -8,7 +8,7 @@ const Title = ({ text, style = {}, theme, inView, delay = 0 }) => {
       animation={theme.animation}
     >
       <h2
-        className="text-center mb-4 md:mb-6 lg:mb-6 text-3xl md:text-4xl font-bold"
+        className="text-center mb-6 md:mb-8 lg:mb-10 text-3xl md:text-4xl font-bold"
         style={{
           ...style,
         }}
