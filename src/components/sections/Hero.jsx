@@ -1,21 +1,47 @@
+import { useInView } from "react-intersection-observer";
+
+import MainTitle from "../ui/MainTitle";
+import MainSubtitle from "../ui/MainSubtitle";
+import MainButton from "../ui/MainButton";
+
 const Hero = ({ content, theme }) => {
+  const { ref, inView } = useInView({
+    threshold: 0.1,
+    triggerOnce: true,
+  });
+
   const customClasses = content.customClasses || {};
 
   return (
     <section
+      ref={ref}
       className={`min-h-screen bg-cover bg-center ${customClasses.section}`}
       style={{ backgroundImage: `url(${content.imageUrl})` }}
     >
       <div className={customClasses.container}>
-        <h1 className={`${customClasses.title}`}>{content.title}</h1>
-        <p className={`${customClasses.subtitle}`}>{content.subtitle}</p>
+        <MainTitle
+          styles={customClasses.title}
+          text={content.title}
+          theme={theme}
+          inView={inView}
+          delay={0}
+        />
 
-        <button
-          className={`${customClasses.button}`}
-          style={{ backgroundColor: theme.colors.BUTTON_BG_COLOR }}
-        >
-          {content.buttonText}
-        </button>
+        <MainSubtitle
+          styles={customClasses.subtitle}
+          text={content.subtitle}
+          theme={theme}
+          inView={inView}
+          delay={200}
+        />
+
+        <MainButton
+          styles={customClasses.button}
+          text={content.buttonText}
+          theme={theme}
+          inView={inView}
+          delay={400}
+        />
       </div>
     </section>
   );
