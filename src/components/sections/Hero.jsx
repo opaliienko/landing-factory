@@ -27,7 +27,7 @@ const Hero = ({ content, theme, landingId }) => {
     >
       <div className={customClasses.container}>
         <MainTitle
-          styles={customClasses.title}
+          style={{ color: theme.colors.TEXT_COLOR }}
           text={content.title}
           theme={theme}
           inView={inView}
@@ -35,7 +35,7 @@ const Hero = ({ content, theme, landingId }) => {
         />
 
         <MainSubtitle
-          styles={customClasses.subtitle}
+          style={{ color: theme.colors.TEXT_COLOR }}
           text={content.subtitle}
           theme={theme}
           inView={inView}

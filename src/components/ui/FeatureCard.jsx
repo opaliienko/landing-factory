@@ -1,3 +1,6 @@
+import ThirdTitle from "./ThirdTitle";
+import Text from "./Text";
+
 const FeatureCard = ({ data, icon: Icon, theme }) => (
   <div
     className="p-4 sm:p-6 md:p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-200 hover:-translate-y-2"
@@ -11,19 +14,17 @@ const FeatureCard = ({ data, icon: Icon, theme }) => (
       </div>
     )}
 
-    <h3
-      className="text-2xl font-bold mb-4 text-center"
-      style={{ color: theme.colors.ACCENT_COLOR }}
-    >
-      {data.title}
-    </h3>
+    <div className="mb-4">
+      <ThirdTitle
+        text={data.title}
+        style={{ color: theme.colors.ACCENT_COLOR, textAlign: "center" }}
+      />
+    </div>
 
-    <p
-      className="text-base text-center leading-relaxed"
-      style={{ color: theme.colors.TEXT_COLOR }}
-    >
-      {data.text}
-    </p>
+    <Text
+      text={data.text}
+      style={{ color: theme.colors.TEXT_COLOR, textAlign: "center" }}
+    />
   </div>
 );
 

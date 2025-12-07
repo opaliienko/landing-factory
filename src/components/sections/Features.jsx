@@ -22,9 +22,8 @@ const Features = ({ content, theme }) => {
       <div className={customClasses.container}>
         {content.title && (
           <Title
-            styles={customClasses.title}
-            color={theme.colors.TEXT_COLOR}
             text={content.title}
+            style={{ color: theme.colors.TEXT_COLOR }}
             theme={theme}
             inView={inView}
             delay={0}
@@ -33,9 +32,8 @@ const Features = ({ content, theme }) => {
 
         {content.title && (
           <Subtitle
-            styles={customClasses.subtitle}
-            color={theme.colors.TEXT_COLOR}
             text={content.subtitle}
+            style={{ color: theme.colors.TEXT_COLOR }}
             theme={theme}
             inView={inView}
             delay={100}
