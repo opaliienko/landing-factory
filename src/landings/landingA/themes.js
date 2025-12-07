@@ -25,4 +25,12 @@ export const THEMES = {
       extraBold: "Nunito-ExtraBold",
     },
   },
+
+  animation: {
+    transition: "transition-all duration-1000",
+    fadeIn: {
+      visible: "opacity-100 translate-y-0",
+      hidden: "opacity-0 translate-y-10",
+    },
+  },
 };
