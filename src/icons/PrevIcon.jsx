@@ -7,9 +7,8 @@ function PrevIcon({ width = 20, height = 20, fill = "#000" }) {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
       xmlSpace="preserve"
-      transform="rotate(180)"
     >
-      <path d="M6.8 23.7L5.4 22.3 15.7 12 5.4 1.7 6.8 0.3 18.5 12z" />
+      <path d="M17.2 23.7l1.4-1.4L8.3 12 18.6 1.7 17.2 0.3 5.5 12z" />
     </svg>
   );
 }
