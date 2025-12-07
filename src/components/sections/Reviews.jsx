@@ -68,7 +68,7 @@ const Reviews = ({ content, theme }) => {
             modules={[Pagination, Navigation]}
             breakpoints={{
               640: {
-                slidesPerView: 3,
+                slidesPerView: 2,
                 slidesPerGroup: 2,
                 spaceBetween: 20,
               },

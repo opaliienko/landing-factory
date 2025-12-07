@@ -1,6 +1,6 @@
 const FeatureCard = ({ data, icon: Icon, theme }) => (
   <div
-    className="p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-200 hover:-translate-y-2"
+    className="p-4 sm:p-6 md:p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-200 hover:-translate-y-2"
     style={{
       backgroundColor: theme.colors.white[100],
     }}

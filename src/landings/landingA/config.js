@@ -29,9 +29,11 @@ export const landingA = {
         button: MainButton,
         customClasses: {
           section:
-            "w-full py-4 px-4 sm:py-6 sm:px-6 md:py-12 md:px-20 flex flex-col justify-center items-center",
-          container: "container flex flex-col text-left text-black",
-          title: "mb-4 text-4xl sm:text-5xl font-bold",
+            "w-full py-8 px-5 sm:py-10 sm:px-8 md:py-12 md:px-16 flex flex-col justify-center items-center",
+          container:
+            "container flex flex-col text-center lg:text-left text-black",
+          title:
+            "mb-4 sm:mb-6 md:mb-8 text-4xl sm:text-5xl md:text-6xl font-bold",
           subtitle: "mb-10 text-3xl sm:text-4xl",
           button: "self-center",
         },
@@ -83,10 +85,12 @@ export const landingA = {
         ],
         card: FeatureCard,
         customClasses: {
-          section: "w-full py-4 px-4 sm:py-6 sm:px-6 md:py-12 md:px-20",
+          section: "w-full py-8 px-5 sm:py-10 sm:px-8 md:py-12 md:px-16",
           container: "container mx-auto",
-          title: "text-3xl md:text-4xl font-bold text-center mb-10",
-          subtitle: "text-xl md:text-2xl text-center mb-12 opacity-80",
+          title:
+            "text-center mb-4 md:mb-6 lg:mb-6 text-3xl md:text-4xl font-bold",
+          subtitle:
+            "text-center mb-4 md:mb-6 lg:mb-8 text-xl md:text-2xl opacity-80",
           grid: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8",
         },
       },
@@ -157,10 +161,12 @@ export const landingA = {
         ],
         card: ReviewCard,
         customClasses: {
-          section: "py-16 px-4 md:py-24",
+          section: "w-full py-8 px-5 sm:py-10 sm:px-8 md:py-12 md:px-16",
           container: "w-full max-w-7xl mx-auto",
-          title: "text-4xl md:text-5xl font-bold text-center mb-4",
-          subtitle: "text-xl md:text-2xl text-center mb-12 opacity-80",
+          title:
+            "text-center mb-4 md:mb-6 lg:mb-6 text-3xl md:text-4xl font-bold",
+          subtitle:
+            "text-center mb-4 md:mb-6 lg:mb-8 text-xl md:text-2xl opacity-80",
         },
       },
     },
@@ -175,7 +181,7 @@ export const landingA = {
         },
         copyright: "All rights reserved.",
         customClasses: {
-          section: "w-full py-4 px-4 sm:py-6 sm:px-6 md:py-12 md:px-20",
+          section: "w-full py-8 px-5 sm:py-10 sm:px-8 md:py-12 md:px-16",
           container:
             "flex flex-col items-center justify-center text-center text-white",
           title: "text-2xl font-bold mb-4",
