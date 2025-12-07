@@ -3,10 +3,12 @@ const Reviews = ({ content, theme }) => {
 
   return (
     <section
-      className={`w-full ${customClasses.section}`}
+      className={customClasses.section}
       style={{ backgroundColor: theme.colors.MAIN_BG_COLOR }}
     >
-      <div className="">Секція Reviews</div>
+      <div className={customClasses.container}>
+        <div className="">Секція Reviews</div>
+      </div>
     </section>
   );
 };

@@ -5,10 +5,10 @@ const Footer = ({ content, theme }) => {
 
   return (
     <footer
-      className={`w-full ${customClasses.section}`}
+      className={customClasses.section}
       style={{ backgroundColor: theme.colors.ACCENT_COLOR }}
     >
-      <div className={`${customClasses.container}`}>
+      <div className={customClasses.container}>
         <h3 className={customClasses.title}>{content.title}</h3>
 
         <ul className={customClasses.list}>
