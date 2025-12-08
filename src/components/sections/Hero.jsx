@@ -1,5 +1,8 @@
 import { useInView } from "react-intersection-observer";
 
+import HeroWrapper from "../ui/HeroWrapper";
+import Container from "../ui/Container";
+
 import MainTitle from "../ui/MainTitle";
 import MainSubtitle from "../ui/MainSubtitle";
 
@@ -11,7 +14,7 @@ const Hero = ({ content, theme, landingId }) => {
     triggerOnce: true,
   });
 
-  const customClasses = content.customClasses || {};
+  const styles = content?.styles || {};
 
   const Button = content.button;
 
@@ -20,15 +23,21 @@ const Hero = ({ content, theme, landingId }) => {
   };
 
   return (
-    <section
+    <HeroWrapper
       ref={ref}
-      className={`min-h-screen bg-cover bg-center ${customClasses.section}`}
       style={{
         backgroundImage: `url(${content.imageUrl})`,
         fontFamily: theme.fonts.fontsFamily.regular,
       }}
     >
-      <div className={customClasses.container}>
+      <Container
+        style={{
+          display: "flex",
+          flexDirection: "column",
+
+          ...styles?.container,
+        }}
+      >
         <MainTitle
           style={{
             color: theme.colors.MAIN_TITLE_TEXT_COLOR,
@@ -52,13 +61,17 @@ const Hero = ({ content, theme, landingId }) => {
         />
 
         <Button
-          styles={customClasses.button}
+          style={{
+            color: theme.colors.TEXT_COLOR,
+            backgroundColor: theme.colors.BUTTON_BG_COLOR,
+            ...styles?.button,
+          }}
           text={content.buttonText}
           theme={theme}
           onClick={onHandleButtonClick}
         />
-      </div>
-    </section>
+      </Container>
+    </HeroWrapper>
   );
 };
 

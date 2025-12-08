@@ -8,8 +8,6 @@ import MainButton from "../../components/ui/MainButton";
 import FeatureCard from "../../components/ui/FeatureCard";
 import ReviewCard from "../../components/ui/ReviewCard";
 
-const sectionPadding = "w-full py-8 px-5 sm:py-10 sm:px-8 md:py-12 md:px-16";
-
 export const landingB = {
   landingId: "LandingB",
   theme: THEMES,
@@ -22,10 +20,14 @@ export const landingB = {
         buttonText: "Get Started",
         imageUrl: heroImage,
         button: MainButton,
-        customClasses: {
-          section: `${sectionPadding} flex flex-col justify-center items-center`,
-          container: "container flex flex-col text-center lg:text-left",
-          button: "self-center",
+        styles: {
+          container: {
+            justifyContent: "center",
+            alignItems: "center",
+          },
+          button: {
+            alignSelf: "center",
+          },
         },
       },
     },
