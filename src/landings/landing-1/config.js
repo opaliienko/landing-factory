@@ -49,7 +49,7 @@ export const config = {
       type: "CustomSection",
       data: {
         title: "My custom section",
-        text: "My custom text",
+        text: "(for example)",
       },
     },
     {
