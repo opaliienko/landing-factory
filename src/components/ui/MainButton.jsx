@@ -1,4 +1,4 @@
-import Text from "./Text";
+import { Text } from "../ui";
 
 const MainButton = ({ style, text, onClick }) => {
   return (

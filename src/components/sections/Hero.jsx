@@ -1,10 +1,6 @@
 import { useInView } from "react-intersection-observer";
 
-import HeroWrapper from "../ui/HeroWrapper";
-import Container from "../ui/Container";
-
-import MainTitle from "../ui/MainTitle";
-import MainSubtitle from "../ui/MainSubtitle";
+import { HeroWrapper, Container, MainTitle, MainSubtitle } from "../ui";
 
 import { trackLead } from "../../helpers/trackLead";
 

@@ -1,12 +1,13 @@
 import { useInView } from "react-intersection-observer";
 
-import SectionWrapper from "../ui/SectionWrapper";
-import Container from "../ui/Container";
-import GridContainer from "../ui/GridContainer";
-
-import Title from "../ui/Title";
-import Subtitle from "../ui/Subtitle";
-import FadeInWhenVisible from "../ui/FadeInWhenVisible";
+import {
+  SectionWrapper,
+  Container,
+  GridContainer,
+  Title,
+  Subtitle,
+  FadeInWhenVisible,
+} from "../ui";
 
 const Features = ({ content, theme }) => {
   const { ref, inView } = useInView({

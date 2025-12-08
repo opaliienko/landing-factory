@@ -3,13 +3,14 @@ import { Pagination, Navigation } from "swiper/modules";
 
 import { useInView } from "react-intersection-observer";
 
-import SectionWrapper from "../ui/SectionWrapper";
-import Container from "../ui/Container";
-
-import Title from "../ui/Title";
-import Subtitle from "../ui/Subtitle";
-import SwiperNavButtons from "../ui/SwiperNavButtons";
-import FadeInWhenVisible from "../ui/FadeInWhenVisible";
+import {
+  SectionWrapper,
+  Container,
+  Title,
+  Subtitle,
+  SwiperNavButtons,
+  FadeInWhenVisible,
+} from "../ui";
 
 import "swiper/css";
 import "swiper/css/pagination";

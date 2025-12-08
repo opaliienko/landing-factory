@@ -1,8 +1,4 @@
-import FooterWrapper from "../ui/FooterWrapper";
-import Container from "../ui/Container";
-
-import ThirdTitle from "../ui/ThirdTitle";
-import Text from "../ui/Text";
+import { FooterWrapper, Container, ThirdTitle, Text } from "../ui";
 
 const Footer = ({ content, theme }) => {
   const styles = content?.styles?.container || {};
