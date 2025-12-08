@@ -1,24 +1,9 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import { resolve } from "path";
-import { readdirSync } from "fs";
 
 import tailwindcss from "@tailwindcss/vite";
 
-const landingsDirectory = resolve(__dirname, "src/landings");
-
-const landings = readdirSync(landingsDirectory, { withFileTypes: true })
-  .filter((dirent) => dirent.isDirectory())
-  .map((dirent) => dirent.name);
-
-const landingInputs = landings.reduce((acc, name) => {
-  acc[name] = resolve(__dirname, `src/landings/${name}/index.html`);
-  return acc;
-}, {});
-
-export default defineConfig(({ command }) => {
-  const isProduction = command === "build";
-
+export default defineConfig(() => {
   return {
     plugins: [react(), tailwindcss()],
     css: {
@@ -29,12 +14,10 @@ export default defineConfig(({ command }) => {
     },
     build: {
       rollupOptions: {
-        input: isProduction
-          ? landingInputs
-          : {
-              main: resolve(__dirname, "index.html"),
-              ...landingInputs,
-            },
+        input: {
+          main: "index.html",
+          "landing-2": "landing-2.html",
+        },
       },
     },
   };
