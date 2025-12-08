@@ -3,6 +3,7 @@ import { Pagination, Navigation } from "swiper/modules";
 
 import { useInView } from "react-intersection-observer";
 
+import SectionWrapper from "../ui/SectionWrapper";
 import Title from "../ui/Title";
 import Subtitle from "../ui/Subtitle";
 import SwiperNavButtons from "../ui/SwiperNavButtons";
@@ -18,13 +19,11 @@ const Reviews = ({ content, theme }) => {
     triggerOnce: true,
   });
 
-  const customClasses = content.customClasses || {};
   const Card = content.card;
 
   return (
-    <section
+    <SectionWrapper
       ref={ref}
-      className={customClasses.section}
       style={{
         background: theme.colors.gradients.main,
         fontFamily: theme.fonts.fontsFamily.regular,
@@ -104,7 +103,7 @@ const Reviews = ({ content, theme }) => {
           </Swiper>
         </FadeInWhenVisible>
       </div>
-    </section>
+    </SectionWrapper>
   );
 };
 

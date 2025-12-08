@@ -1,5 +1,6 @@
 import { useInView } from "react-intersection-observer";
 
+import SectionWrapper from "../ui/SectionWrapper";
 import Title from "../ui/Title";
 import Subtitle from "../ui/Subtitle";
 import FadeInWhenVisible from "../ui/FadeInWhenVisible";
@@ -14,9 +15,8 @@ const Features = ({ content, theme }) => {
   const Card = content.card;
 
   return (
-    <section
+    <SectionWrapper
       ref={ref}
-      className={customClasses.section}
       style={{
         backgroundColor: theme.colors.SECONDARY_BG_COLOR,
         fontFamily: theme.fonts.fontsFamily.regular,
@@ -64,7 +64,7 @@ const Features = ({ content, theme }) => {
           </div>
         </FadeInWhenVisible>
       </div>
-    </section>
+    </SectionWrapper>
   );
 };
 
