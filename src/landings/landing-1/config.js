@@ -2,14 +2,14 @@ import { THEMES } from "./themes";
 
 import { features, reviews } from "./fake-api";
 
-import heroImage from "../landingB/images/hero.jpg";
+import heroImage from "./images/hero.jpg";
 
 import MainButton from "../../components/ui/MainButton";
 import FeatureCard from "../../components/ui/FeatureCard";
 import ReviewCard from "../../components/ui/ReviewCard";
 
-export const landingB = {
-  landingId: "LandingB",
+export const config = {
+  landingId: "landing-1",
   theme: THEMES,
   sections: [
     {
