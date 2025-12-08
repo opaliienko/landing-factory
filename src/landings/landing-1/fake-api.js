@@ -1,11 +1,12 @@
-import RocketIcon from "../../icons/RocketIcon";
-import LightningIcon from "../../icons/LightningIcon";
-import LockIcon from "../../icons/LockIcon";
-import PaletteIcon from "../../icons/PaletteIcon";
-import MobileIcon from "../../icons/MobileIcon";
-import DiamondIcon from "../../icons/DiamondIcon";
-
-import ClientAvatarIcon from "../../icons/ClientAvatarIcon";
+import {
+  ClientAvatarIcon,
+  RocketIcon,
+  LightningIcon,
+  LockIcon,
+  PaletteIcon,
+  MobileIcon,
+  DiamondIcon,
+} from "../../icons";
 
 export const features = [
   {
