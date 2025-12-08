@@ -1,9 +1,16 @@
+import CardWrapper from "./CardWrapper";
+
 import ThirdTitle from "./ThirdTitle";
 import Text from "./Text";
 
 const ReviewCard = ({ data, icon: Icon, theme }) => (
-  <div
-    className={`p-4 sm:p-6 md:p-6 bg-white shadow-md rounded-xl h-52 sm:h-54 md:h-56 flex flex-col justify-between hover:shadow-xl transition-shadow duration-300`}
+  <CardWrapper
+    style={{
+      justifyContent: "space-between",
+      alignItems: "stretch",
+      height: "210px",
+      backgroundColor: theme.colors.white[100],
+    }}
   >
     <Text
       text={data.text}
@@ -32,7 +39,7 @@ const ReviewCard = ({ data, icon: Icon, theme }) => (
         />
       )}
     </div>
-  </div>
+  </CardWrapper>
 );
 
 export default ReviewCard;
