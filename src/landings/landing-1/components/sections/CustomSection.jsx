@@ -2,7 +2,7 @@ import { useInView } from "react-intersection-observer";
 
 import { SectionWrapper, Container } from "../../../../components/ui";
 
-import { CustomTitle } from "../ui";
+import { CustomTitle, CustomText } from "../ui";
 
 const CustomSection = ({ content, theme }) => {
   const { ref, inView } = useInView({
@@ -26,6 +26,16 @@ const CustomSection = ({ content, theme }) => {
             theme={theme}
             inView={inView}
             delay={0}
+          />
+        )}
+
+        {content.text && (
+          <CustomText
+            text={content.text}
+            style={{ color: theme.colors.TEXT_COLOR, textAlign: "center" }}
+            theme={theme}
+            inView={inView}
+            delay={100}
           />
         )}
       </Container>
