@@ -3,12 +3,12 @@ import CardWrapper from "./CardWrapper";
 import ThirdTitle from "./ThirdTitle";
 import Text from "./Text";
 
-const FeatureCard = ({ data, icon: Icon, theme }) => (
+const FeatureCard = ({ data, icon: Icon, backgroundColor, theme }) => (
   <CardWrapper
     style={{
       justifyContent: "center",
       alignItems: "center",
-      backgroundColor: theme.colors.white[100],
+      backgroundColor,
     }}
   >
     {Icon && (

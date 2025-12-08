@@ -1,6 +1,7 @@
 export const THEMES = {
   colors: {
     MAIN_BG_COLOR: "#BACBD9",
+    MAIN_LIGHT_COLOR: "#F0F5FA",
     SECONDARY_BG_COLOR: "#F2F2F2",
 
     MAIN_TITLE_TEXT_COLOR: "#030712",

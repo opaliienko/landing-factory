@@ -51,8 +51,13 @@ const Features = ({ content, theme }) => {
           delay={200}
         >
           <GridContainer>
-            {content.features.map((feature) => {
+            {content.features.map((feature, index) => {
               const IconComponent = feature.icon;
+
+              const backgroundColor =
+                index % 2 === 0
+                  ? theme.colors.white[100]
+                  : theme.colors.MAIN_LIGHT_COLOR;
 
               return (
                 <Card
@@ -60,6 +65,7 @@ const Features = ({ content, theme }) => {
                   data={feature}
                   icon={IconComponent}
                   theme={theme}
+                  backgroundColor={backgroundColor}
                 />
               );
             })}
