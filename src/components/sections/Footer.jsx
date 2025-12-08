@@ -9,7 +9,10 @@ const Footer = ({ content, theme }) => {
   return (
     <footer
       className={customClasses.section}
-      style={{ backgroundColor: theme.colors.ACCENT_COLOR }}
+      style={{
+        backgroundColor: theme.colors.ACCENT_COLOR,
+        fontFamily: theme.fonts.fontsFamily.regular,
+      }}
     >
       <div className={customClasses.container}>
         <div className="mb-4">

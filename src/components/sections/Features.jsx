@@ -17,7 +17,10 @@ const Features = ({ content, theme }) => {
     <section
       ref={ref}
       className={customClasses.section}
-      style={{ backgroundColor: theme.colors.SECONDARY_BG_COLOR }}
+      style={{
+        backgroundColor: theme.colors.SECONDARY_BG_COLOR,
+        fontFamily: theme.fonts.fontsFamily.regular,
+      }}
     >
       <div className="container mx-auto">
         {content.title && (

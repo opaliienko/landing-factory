@@ -28,9 +28,9 @@ export const THEMES = {
 
   fonts: {
     fontsFamily: {
-      medium: "Nunito-Medium",
-      bold: "Nunito-Bold",
-      extraBold: "Nunito-ExtraBold",
+      regular: "Montserrat-Regular",
+      medium: "Montserrat-SemiBold",
+      bold: "Montserrat-Bold",
     },
   },
 

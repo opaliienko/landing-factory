@@ -25,7 +25,10 @@ const Reviews = ({ content, theme }) => {
     <section
       ref={ref}
       className={customClasses.section}
-      style={{ background: theme.colors.gradients.main }}
+      style={{
+        background: theme.colors.gradients.main,
+        fontFamily: theme.fonts.fontsFamily.regular,
+      }}
     >
       <div className="container mx-auto max-w-7xl">
         {content.title && (
