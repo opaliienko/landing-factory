@@ -9,8 +9,6 @@ import FeatureCard from "../../components/ui/FeatureCard";
 import ReviewCard from "../../components/ui/ReviewCard";
 
 const sectionPadding = "w-full py-8 px-5 sm:py-10 sm:px-8 md:py-12 md:px-16";
-const footerPadding =
-  "w-full pt-8 pb-6 sm:pt-8 sm:pb-8 md:pt-10 md:pb-8 px-5 sm:px-8 md:px-16";
 
 export const landingA = {
   landingId: "LandingA",
@@ -60,9 +58,10 @@ export const landingA = {
           address: "125 Green Street, San Francisco, CA 94107, USA",
         },
         copyright: "All rights reserved.",
-        customClasses: {
-          section: `${footerPadding}`,
-          container: "flex flex-col items-center justify-center text-center",
+        styles: {
+          container: {
+            textAlign: "center",
+          },
         },
       },
     },

@@ -1,7 +1,7 @@
 import { useInView } from "react-intersection-observer";
 
 import SectionWrapper from "../ui/SectionWrapper";
-import SectionContainer from "../ui/SectionContainer";
+import Container from "../ui/Container";
 
 import Title from "../ui/Title";
 import Subtitle from "../ui/Subtitle";
@@ -24,7 +24,7 @@ const Features = ({ content, theme }) => {
         fontFamily: theme.fonts.fontsFamily.regular,
       }}
     >
-      <SectionContainer>
+      <Container>
         {content.title && (
           <Title
             text={content.title}
@@ -65,7 +65,7 @@ const Features = ({ content, theme }) => {
             })}
           </div>
         </FadeInWhenVisible>
-      </SectionContainer>
+      </Container>
     </SectionWrapper>
   );
 };

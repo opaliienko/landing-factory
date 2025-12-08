@@ -1,4 +1,4 @@
-const SectionContainer = ({ style = {}, children }) => {
+const Container = ({ style = {}, children }) => {
   return (
     <div
       className="container mx-auto"
@@ -11,4 +11,4 @@ const SectionContainer = ({ style = {}, children }) => {
   );
 };
 
-export default SectionContainer;
+export default Container;

@@ -4,7 +4,7 @@ import { Pagination, Navigation } from "swiper/modules";
 import { useInView } from "react-intersection-observer";
 
 import SectionWrapper from "../ui/SectionWrapper";
-import SectionContainer from "../ui/SectionContainer";
+import Container from "../ui/Container";
 
 import Title from "../ui/Title";
 import Subtitle from "../ui/Subtitle";
@@ -31,7 +31,7 @@ const Reviews = ({ content, theme }) => {
         fontFamily: theme.fonts.fontsFamily.regular,
       }}
     >
-      <SectionContainer>
+      <Container>
         {content.title && (
           <Title
             text={content.title}
@@ -104,7 +104,7 @@ const Reviews = ({ content, theme }) => {
             <SwiperNavButtons theme={theme} />
           </Swiper>
         </FadeInWhenVisible>
-      </SectionContainer>
+      </Container>
     </SectionWrapper>
   );
 };

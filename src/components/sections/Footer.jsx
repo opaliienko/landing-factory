@@ -1,24 +1,32 @@
+import FooterWrapper from "../ui/FooterWrapper";
+import Container from "../ui/Container";
+
 import ThirdTitle from "../ui/ThirdTitle";
 import Text from "../ui/Text";
 
 const Footer = ({ content, theme }) => {
-  const customClasses = content.customClasses || {};
-  const contacts = content.contacts || {};
-  const copyright = content.copyright;
+  const styles = content?.styles?.container || {};
+  const contacts = content?.contacts || {};
+  const copyright = content?.copyright;
 
   return (
-    <footer
-      className={customClasses.section}
+    <FooterWrapper
       style={{
         backgroundColor: theme.colors.ACCENT_COLOR,
         fontFamily: theme.fonts.fontsFamily.regular,
       }}
     >
-      <div className={customClasses.container}>
+      <Container
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          ...styles,
+        }}
+      >
         <div className="mb-4">
           <ThirdTitle
             text={content.title}
-            style={{ color: theme.colors.white[100], textAlign: "center" }}
+            style={{ color: theme.colors.white[100] }}
           />
         </div>
 
@@ -29,7 +37,6 @@ const Footer = ({ content, theme }) => {
                 text={`Email: ${contacts.email}`}
                 style={{
                   color: "rgba(255, 255, 255, 0.9)",
-                  textAlign: "center",
                 }}
               />
             </li>
@@ -40,7 +47,6 @@ const Footer = ({ content, theme }) => {
                 text={`Phone: ${contacts.phone}`}
                 style={{
                   color: "rgba(255, 255, 255, 0.9)",
-                  textAlign: "center",
                 }}
               />
             </li>
@@ -51,7 +57,6 @@ const Footer = ({ content, theme }) => {
                 text={`Address: ${contacts.address}`}
                 style={{
                   color: "rgba(255, 255, 255, 0.9)",
-                  textAlign: "center",
                 }}
               />
             </li>
@@ -62,11 +67,11 @@ const Footer = ({ content, theme }) => {
           text={`© ${new Date().getFullYear()} ${copyright}`}
           style={{
             color: "rgba(255, 255, 255, 0.6)",
-            textAlign: "center",
+            // textAlign: "center",
           }}
         />
-      </div>
-    </footer>
+      </Container>
+    </FooterWrapper>
   );
 };
 
