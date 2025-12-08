@@ -1,17 +1,18 @@
-const GridContainer = ({
-  children,
-  cols = 1,
-  mdCols = 2,
-  lgCols = 3,
-  gap = "6",
-  mdGap = "8",
-  lgGap = "8",
-  style = {},
-}) => {
+const GridContainer = ({ children, style = {} }) => {
   return (
     <div
-      className={`grid grid-cols-${cols} md:grid-cols-${mdCols} lg:grid-cols-${lgCols} gap-${gap} md:gap-${mdGap} lg:gap-${lgGap}`}
-      style={{ ...style }}
+      className="
+        grid 
+        grid-cols-1 
+        md:grid-cols-2 
+        lg:grid-cols-3 
+        gap-6 
+        md:gap-8 
+        lg:gap-8
+      "
+      style={{
+        ...style,
+      }}
     >
       {children}
     </div>

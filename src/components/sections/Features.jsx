@@ -50,7 +50,7 @@ const Features = ({ content, theme }) => {
           inView={inView}
           delay={200}
         >
-          <GridContainer cols={1} mdCols={2} lgCols={3}>
+          <GridContainer>
             {content.features.map((feature) => {
               const IconComponent = feature.icon;
 
