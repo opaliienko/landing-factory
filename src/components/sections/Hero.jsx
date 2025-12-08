@@ -38,20 +38,27 @@ const Hero = ({ content, theme, landingId }) => {
           ...styles?.container,
         }}
       >
-        <MainTitle
-          style={{
-            color: theme.colors.MAIN_TITLE_TEXT_COLOR,
-            fontFamily: theme.fonts.fontsFamily.bold,
-          }}
-          text={content.title}
-          theme={theme}
-          inView={inView}
-          delay={0}
-        />
+        <div className="md:w-[800px] pt-10">
+          <MainTitle
+            style={{
+              textAlign: "center",
+              background: theme.colors.gradients.title,
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              fontFamily: theme.fonts.fontsFamily.bold,
+            }}
+            text={content.title}
+            theme={theme}
+            inView={inView}
+            delay={0}
+          />
+        </div>
 
         <MainSubtitle
           style={{
-            color: theme.colors.MAIN_SUB_TITLE_TEXT_COLOR,
+            background: theme.colors.gradients.subtitle,
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
             fontFamily: theme.fonts.fontsFamily.medium,
           }}
           text={content.subtitle}

@@ -23,6 +23,8 @@ export const THEMES = {
 
     gradients: {
       main: "linear-gradient(to bottom, #F2F2F2, #BACBD9)",
+      title: "linear-gradient(10deg, #000000, #FFFFFF)",
+      subtitle: "linear-gradient(90deg, #000000 , #ccc )",
     },
   },
 

@@ -8,7 +8,7 @@ const MainSubtitle = ({ text, style = {}, theme, inView, delay = 0 }) => {
       animation={theme.animation}
     >
       <h1
-        className="mb-10 text-3xl sm:text-4xl"
+        className="mb-10 text-xl sm:text-2xl"
         style={{
           ...style,
         }}

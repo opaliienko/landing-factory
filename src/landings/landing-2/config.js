@@ -14,7 +14,6 @@ export const config = {
       type: "Hero",
       data: {
         title: "Welcome to Our Landing A Page",
-        subtitle: "Create amazing web experiences easily",
         buttonText: "Get Started",
         imageUrl: heroImage,
         button: MainButton,
