@@ -1,16 +1,91 @@
-# React + Vite
+# Landing Factory — Конструктор лендінгів
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Landing Factory — це гнучкий конструктор лендінгів, створений на основі React + Vite.
+Додаток дозволяє зібрати лендінг зі стандартизованих секцій, а також додавати повністю кастомні секції, унікальні для кожного проєкту.
 
-Currently, two official plugins are available:
+Проєкт розроблено так, щоб легко масштабувати кількість лендінгів, змінювати порядок секцій, конфігурацію та стиль — без дублювання коду.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Посилання для перегляду
 
-## React Compiler
+http://192.168.0.48:3000/
+http://192.168.0.48:3000/landing-2/landing-2
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Локальний запуск
 
-## Expanding the ESLint configuration
+npm install
+npm run dev
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Білд
+
+npm run build
+npx serve dist (для перегляду збірки)
+
+## Замість того, щоб створювати кожен лендінг з нуля, у застосунку реалізовано:
+
+PageBuilder — механізм, який за конфігом збирає лендінг із готових секцій.
+Глобальні секції (Hero, Features, Reviews, Footer).
+Можливість додавати власні кастомні секції, які будуть доступні лише конкретному лендінгу.
+Керування структурою сторінки через config.js.
+Підтримка кількох лендінгів у одному проєкті (landing-1, landing-2, ...).
+Кастомні UI-компоненти (картки, кнопки тощо).
+Подія Lead — симуляція відправки заявки + Toast сповіщення.
+
+## Як працює PageBuilder
+
+PageBuilder отримує:
+
+- config — структура секцій певного лендінгу
+- customSections — мапу унікальних компонентів (опціонально)
+
+і збирає сторінку головну сторінку.
+
+## Переваги:
+
+Зміна порядку секцій без редагування JSX
+Можливість відключити або додати секцію
+Кожен лендінг має можливість додавати власні кастомні секції, текстовий контент та колірну гаму
+Мінімум дублювання коду
+
+## Створення нового та підтримка декількох лендінгів
+
+Для того, щоб додати новий лендінг, необхідно:
+
+1. Створити нову папку з лендінгом (наприклад landing-2) на основі будь-якого із наявних лендінгів
+2. Додати файл landing-2.html у корінь проекту
+3. У vite.config.js визначити новий лендінг у input defineConfig
+   (де main - лендінг, який рендериться на /,
+   а всі наступні landing-2 - рендеряться як /landing-2...)
+
+input: {
+main: "index.html",
+"landing-2": "landing-2.html"
+}
+
+(додавання landing-2, landing-3... у input defineConfig - є опціональним)
+
+4. Для того, щоб бажаний лендінг рендерився на / достатньо у кореневому файлі index.html змінити шлях до main.jsx необхідного лендінгу
+
+## Додавання кастомної секції
+
+У landing-1 можна створити свою секцію:
+src/landings/landing-1/components/sections/CustomSection.jsx
+
+У main.jsx:
+
+1. Створюємо об'єкт з імпортованими кастомними секціями
+   const customSections = { CustomSection };
+
+2. Передаємо об'єкт customSections у PageBuilder
+
+3. У config.js додаємо об'єкт з відповідним типом секції та налаштуваннями
+
+## Технології
+
+- HTML
+- CSS
+- JS
+- React 18
+- Vite
+- React Toastify
+- TailwindCSS
+- swiper
