@@ -46,6 +46,12 @@ export const config = {
       },
     },
     {
+      type: "CustomSection",
+      data: {
+        title: "My custom section",
+      },
+    },
+    {
       type: "Footer",
       data: {
         title: "Contact Us",

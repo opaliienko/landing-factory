@@ -7,11 +7,13 @@ import Footer from "../components/sections/Footer";
 
 const sectionMap = { Hero, Features, Reviews, Footer };
 
-const PageBuilder = ({ config }) => {
+const PageBuilder = ({ config, customSections = {} }) => {
+  const mergedSections = { ...sectionMap, ...customSections };
+
   return (
     <>
       {config.sections.map((section, index) => {
-        const SectionComponent = sectionMap[section.type];
+        const SectionComponent = mergedSections[section.type];
         if (!SectionComponent) return null;
         return (
           <SectionComponent
