@@ -19,7 +19,11 @@ const Hero = ({ content, theme, landingId }) => {
   const Button = content.button;
 
   const onHandleButtonClick = () => {
-    trackLead("Дякуємо! Ваш запит отримано!", landingId);
+    trackLead(
+      "Дякуємо! Ваш запит отримано!",
+      landingId,
+      theme.colors.MAIN_LIGHT_COLOR
+    );
   };
 
   return (
