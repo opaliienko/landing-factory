@@ -24,8 +24,8 @@ export const THEMES = {
 
     gradients: {
       main: "linear-gradient(to bottom, #f9fafb, #D5F0D9)",
-      title: "linear-gradient(10deg, #000000, #595959)",
-      subtitle: "linear-gradient(90deg, #000000 , #000000 )",
+      title: "linear-gradient(#FFFFFF, #CCC)",
+      subtitle: "linear-gradient(#FFFFFF , #CCC )",
     },
   },
 
