@@ -2,6 +2,7 @@ import { useInView } from "react-intersection-observer";
 
 import SectionWrapper from "../ui/SectionWrapper";
 import Container from "../ui/Container";
+import GridContainer from "../ui/GridContainer";
 
 import Title from "../ui/Title";
 import Subtitle from "../ui/Subtitle";
@@ -13,7 +14,6 @@ const Features = ({ content, theme }) => {
     triggerOnce: true,
   });
 
-  const customClasses = content.customClasses || {};
   const Card = content.card;
 
   return (
@@ -50,7 +50,7 @@ const Features = ({ content, theme }) => {
           inView={inView}
           delay={200}
         >
-          <div className={customClasses.grid}>
+          <GridContainer cols={1} mdCols={2} lgCols={3}>
             {content.features.map((feature) => {
               const IconComponent = feature.icon;
 
@@ -63,7 +63,7 @@ const Features = ({ content, theme }) => {
                 />
               );
             })}
-          </div>
+          </GridContainer>
         </FadeInWhenVisible>
       </Container>
     </SectionWrapper>
