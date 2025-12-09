@@ -5,10 +5,24 @@ import Features from "../components/sections/Features";
 import Reviews from "../components/sections/Reviews";
 import Footer from "../components/sections/Footer";
 
+import { validateConfig } from "../helpers/validateConfig";
+
 const sectionMap = { Hero, Features, Reviews, Footer };
 
 const PageBuilder = ({ config, customSections = {} }) => {
   const mergedSections = { ...sectionMap, ...customSections };
+
+  const isValid = validateConfig(config, mergedSections);
+  if (!isValid) {
+    return (
+      <div
+        className="w-full min-h-screen flex justify-center items-center text-center mb-6 md:mb-8 lg:mb-10 text-3xl md:text-4xl font-bold"
+        style={{ color: "red" }}
+      >
+        Помилка конфігурації. Деталі у консолі.
+      </div>
+    );
+  }
 
   return (
     <>
