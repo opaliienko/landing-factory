@@ -2,9 +2,9 @@ import { THEMES } from "./themes";
 
 import { features, reviews } from "./fake-api";
 
-import heroImage from "../landing-2/images/hero.jpg";
+import heroImage from "./images/hero.jpg";
 
-import { MainButton, FeatureCard, ReviewCard } from "../../components/ui";
+import { MainButton, FeatureCard, ReviewCard } from "@/components/ui";
 
 export const config = {
   landingId: "landing-2",

@@ -1,4 +1,4 @@
-import { FooterWrapper, Container, ThirdTitle, Text } from "../../ui";
+import { FooterWrapper, Container, ThirdTitle, Text } from "@/components/ui";
 
 const Footer = ({ content, theme }) => {
   const styles = content?.styles?.container || {};

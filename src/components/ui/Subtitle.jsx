@@ -1,4 +1,4 @@
-import { FadeInWhenVisible } from "../ui";
+import { FadeInWhenVisible } from "@/components/ui";
 
 const Subtitle = ({ text, style = {}, theme, inView, delay = 0 }) => {
   return (

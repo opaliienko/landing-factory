@@ -8,9 +8,9 @@ import {
   Subtitle,
   SwiperNavButtons,
   FadeInWhenVisible,
-} from "../../ui";
+} from "@/components/ui";
 
-import { useSectionInView } from "../../../hooks/useSectionInView";
+import { useSectionInView } from "@/hooks/useSectionInView";
 
 import "swiper/css";
 import "swiper/css/pagination";

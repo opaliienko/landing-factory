@@ -1,4 +1,4 @@
-import { CardWrapper, ThirdTitle, Text } from "../ui";
+import { CardWrapper, ThirdTitle, Text } from "@/components/ui";
 
 const FeatureCard = ({ data, icon: Icon, backgroundColor, theme }) => (
   <CardWrapper

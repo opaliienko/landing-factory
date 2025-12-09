@@ -1,11 +1,11 @@
 import { ToastContainer } from "react-toastify";
 
-import Hero from "../components/sections/Hero/Hero";
-import Features from "../components/sections/Features/Features";
-import Reviews from "../components/sections/Reviews/Reviews";
-import Footer from "../components/sections/Footer/Footer";
+import Hero from "@/components/sections/Hero/Hero";
+import Features from "@/components/sections/Features/Features";
+import Reviews from "@/components/sections/Reviews/Reviews";
+import Footer from "@/components/sections/Footer/Footer";
 
-import { validateConfig } from "../helpers/validateConfig";
+import { validateConfig } from "@/helpers/validateConfig";
 
 const sectionMap = { Hero, Features, Reviews, Footer };
 

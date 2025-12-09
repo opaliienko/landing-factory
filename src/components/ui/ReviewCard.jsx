@@ -1,4 +1,4 @@
-import { CardWrapper, ThirdTitle, Text } from "../ui";
+import { CardWrapper, ThirdTitle, Text } from "@/components/ui";
 
 const ReviewCard = ({ data, icon: Icon, theme }) => (
   <CardWrapper

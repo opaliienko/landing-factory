@@ -1,6 +1,6 @@
 import { useSwiper } from "swiper/react";
 
-import { PrevIcon, NextIcon } from "../../icons";
+import { PrevIcon, NextIcon } from "@/icons";
 
 const SwiperNavButtons = ({ theme }) => {
   const swiper = useSwiper();

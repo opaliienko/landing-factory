@@ -1,4 +1,4 @@
-import { FadeInWhenVisible } from "../../../../components/ui";
+import { FadeInWhenVisible } from "@/components/ui";
 
 const CustomTitle = ({ text, style = {}, theme, inView, delay = 0 }) => {
   return (

@@ -1,8 +1,13 @@
-import { HeroWrapper, Container, MainTitle, MainSubtitle } from "../../ui";
+import {
+  HeroWrapper,
+  Container,
+  MainTitle,
+  MainSubtitle,
+} from "@/components/ui";
 
-import { useSectionInView } from "../../../hooks/useSectionInView";
+import { useSectionInView } from "@/hooks/useSectionInView";
 
-import { trackLead } from "../../../helpers/trackLead";
+import { trackLead } from "@/helpers/trackLead";
 
 const Hero = ({ content, theme, landingId }) => {
   const { ref, inView } = useSectionInView();

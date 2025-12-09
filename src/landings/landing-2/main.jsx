@@ -1,5 +1,5 @@
 import ReactDOM from "react-dom/client";
-import PageBuilder from "../../builders/PageBuilder";
+import PageBuilder from "@/builders/PageBuilder";
 import { config } from "./config";
 
 import "./index.css";

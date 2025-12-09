@@ -6,7 +6,7 @@ import {
   PaletteIcon,
   MobileIcon,
   DiamondIcon,
-} from "../../icons";
+} from "@/icons";
 
 export const features = [
   {
