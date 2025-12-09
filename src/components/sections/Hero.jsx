@@ -50,7 +50,7 @@ const Hero = ({ content, theme, landingId }) => {
             text={content.title}
             theme={theme}
             inView={inView}
-            delay={0}
+            delay={100}
           />
         </div>
 
@@ -64,7 +64,7 @@ const Hero = ({ content, theme, landingId }) => {
           text={content.subtitle}
           theme={theme}
           inView={inView}
-          delay={100}
+          delay={200}
         />
 
         <Button

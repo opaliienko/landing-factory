@@ -39,7 +39,7 @@ const Reviews = ({ content, theme }) => {
             style={{ color: theme.colors.TITLE_TEXT_COLOR }}
             theme={theme}
             inView={inView}
-            delay={0}
+            delay={100}
           />
         )}
 
@@ -49,14 +49,14 @@ const Reviews = ({ content, theme }) => {
             style={{ color: theme.colors.TEXT_COLOR }}
             theme={theme}
             inView={inView}
-            delay={100}
+            delay={200}
           />
         )}
 
         <FadeInWhenVisible
           animation={theme.animation}
           inView={inView}
-          delay={200}
+          delay={300}
         >
           <Swiper
             speed={500}

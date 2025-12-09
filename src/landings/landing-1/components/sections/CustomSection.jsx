@@ -25,7 +25,7 @@ const CustomSection = ({ content, theme }) => {
             style={{ color: theme.colors.TITLE_TEXT_COLOR }}
             theme={theme}
             inView={inView}
-            delay={0}
+            delay={100}
           />
         )}
 
@@ -35,7 +35,7 @@ const CustomSection = ({ content, theme }) => {
             style={{ color: theme.colors.TEXT_COLOR, textAlign: "center" }}
             theme={theme}
             inView={inView}
-            delay={100}
+            delay={200}
           />
         )}
       </Container>
