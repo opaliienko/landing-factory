@@ -2,10 +2,10 @@ import { CardWrapper, ThirdTitle, Text } from "../ui";
 
 const ReviewCard = ({ data, icon: Icon, theme }) => (
   <CardWrapper
+    className="h-40 md:h-48"
     style={{
       justifyContent: "space-between",
       alignItems: "stretch",
-      height: "210px",
       backgroundColor: theme.colors.white[100],
     }}
   >
