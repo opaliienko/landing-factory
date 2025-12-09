@@ -1,5 +1,3 @@
-import { useInView } from "react-intersection-observer";
-
 import {
   SectionWrapper,
   Container,
@@ -9,11 +7,10 @@ import {
   FadeInWhenVisible,
 } from "../ui";
 
+import { useSectionInView } from "../../hooks/useSectionInView";
+
 const Features = ({ content, theme }) => {
-  const { ref, inView } = useInView({
-    threshold: 0.1,
-    triggerOnce: true,
-  });
+  const { ref, inView } = useSectionInView();
 
   const Card = content.card;
 

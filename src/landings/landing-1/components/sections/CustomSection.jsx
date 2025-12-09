@@ -1,14 +1,11 @@
-import { useInView } from "react-intersection-observer";
-
 import { SectionWrapper, Container } from "../../../../components/ui";
 
 import { CustomTitle, CustomText } from "../ui";
 
+import { useSectionInView } from "../../../../hooks/useSectionInView";
+
 const CustomSection = ({ content, theme }) => {
-  const { ref, inView } = useInView({
-    threshold: 0.1,
-    triggerOnce: true,
-  });
+  const { ref, inView } = useSectionInView();
 
   return (
     <SectionWrapper

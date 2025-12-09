@@ -1,8 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
 
-import { useInView } from "react-intersection-observer";
-
 import {
   SectionWrapper,
   Container,
@@ -12,15 +10,14 @@ import {
   FadeInWhenVisible,
 } from "../ui";
 
+import { useSectionInView } from "../../hooks/useSectionInView";
+
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 const Reviews = ({ content, theme }) => {
-  const { ref, inView } = useInView({
-    threshold: 0.1,
-    triggerOnce: true,
-  });
+  const { ref, inView } = useSectionInView();
 
   const Card = content.card;
 

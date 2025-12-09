@@ -1,14 +1,11 @@
-import { useInView } from "react-intersection-observer";
-
 import { HeroWrapper, Container, MainTitle, MainSubtitle } from "../ui";
+
+import { useSectionInView } from "../../hooks/useSectionInView";
 
 import { trackLead } from "../../helpers/trackLead";
 
 const Hero = ({ content, theme, landingId }) => {
-  const { ref, inView } = useInView({
-    threshold: 0.1,
-    triggerOnce: true,
-  });
+  const { ref, inView } = useSectionInView();
 
   const styles = content?.styles || {};
 
