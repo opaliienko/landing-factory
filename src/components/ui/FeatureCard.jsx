@@ -2,6 +2,7 @@ import { CardWrapper, ThirdTitle, Text } from "@/components/ui";
 
 const FeatureCard = ({ data, icon: Icon, backgroundColor, theme }) => (
   <CardWrapper
+    className="h-36 md:h-48"
     style={{
       justifyContent: "center",
       alignItems: "center",

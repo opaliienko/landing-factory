@@ -2,7 +2,7 @@ import { CardWrapper, ThirdTitle, Text } from "@/components/ui";
 
 const ReviewCard = ({ data, icon: Icon, theme }) => (
   <CardWrapper
-    className="h-40 md:h-48"
+    className="h-36 md:h-48"
     style={{
       justifyContent: "space-between",
       alignItems: "stretch",

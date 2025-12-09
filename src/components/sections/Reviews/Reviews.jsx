@@ -73,7 +73,7 @@ const Reviews = ({ content, theme }) => {
                 spaceBetween: 20,
               },
               1024: {
-                slidesPerView: 4,
+                slidesPerView: 3,
                 slidesPerGroup: 2,
                 spaceBetween: 20,
               },
