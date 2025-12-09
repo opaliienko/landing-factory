@@ -1,8 +1,8 @@
-import { SectionWrapper, Container } from "../../../../components/ui";
+import { SectionWrapper, Container } from "../../../../../components/ui";
 
-import { CustomTitle, CustomText } from "../ui";
+import { CustomTitle, CustomText } from "../../ui";
 
-import { useSectionInView } from "../../../../hooks/useSectionInView";
+import { useSectionInView } from "../../../../../hooks/useSectionInView";
 
 const CustomSection = ({ content, theme }) => {
   const { ref, inView } = useSectionInView();

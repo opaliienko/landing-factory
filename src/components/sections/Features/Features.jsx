@@ -5,9 +5,9 @@ import {
   Title,
   Subtitle,
   FadeInWhenVisible,
-} from "../ui";
+} from "../../ui";
 
-import { useSectionInView } from "../../hooks/useSectionInView";
+import { useSectionInView } from "../../../hooks/useSectionInView";
 
 const Features = ({ content, theme }) => {
   const { ref, inView } = useSectionInView();

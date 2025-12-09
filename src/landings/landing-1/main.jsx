@@ -2,7 +2,7 @@ import ReactDOM from "react-dom/client";
 import PageBuilder from "../../builders/PageBuilder";
 import { config } from "./config";
 
-import CustomSection from "./components/sections/CustomSection";
+import CustomSection from "./components/sections/CustomSection/CustomSection";
 
 import "./index.css";
 
