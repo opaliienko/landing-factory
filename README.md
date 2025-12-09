@@ -15,12 +15,15 @@ https://landingfactory.netlify.app/landing-2
 ## Локальний запуск
 
 npm install
+
 npm run dev
 
 ## Білд
 
 npm run build
-npx serve dist (для перегляду збірки)
+
+npx serve dist
+(для перегляду збірки)
 
 ## Замість того, щоб створювати кожен лендінг з нуля, у застосунку реалізовано:
 
